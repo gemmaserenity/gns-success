@@ -1,10 +1,10 @@
-const html = `<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="GNS — Global Network of Success. Independent guidance and trusted connections across real estate and insurance.">
-  <meta name="theme-color" content="#10251f">
+  <meta name="theme-color" content="#e1ad20">
   <meta property="og:type" content="website">
   <meta property="og:title" content="GNS | Global Network of Success">
   <meta property="og:description" content="Real Estate · Insurance · Community. Independent pathways forward.">
@@ -19,16 +19,17 @@ const html = `<!doctype html>
   <title>GNS | Global Network of Success</title>
   <style>
     :root {
-      --forest: #10251f;
-      --forest-2: #18382f;
-      --cream: #f6f1e7;
-      --paper: #fffdf8;
-      --gold: #cda45e;
-      --gold-dark: #9b7333;
-      --ink: #14211d;
-      --muted: #5f6c66;
-      --line: rgba(16, 37, 31, .14);
-      --shadow: 0 24px 70px rgba(16, 37, 31, .12);
+      --forest: #2b210e;
+      --forest-2: #4a3510;
+      --cream: #fff7dc;
+      --paper: #fffdf5;
+      --gold: #e1ad20;
+      --gold-light: #f5cf5b;
+      --gold-dark: #8a6000;
+      --ink: #291f0d;
+      --muted: #6e624a;
+      --line: rgba(92, 67, 13, .18);
+      --shadow: 0 24px 70px rgba(76, 52, 5, .14);
     }
 
     * { box-sizing: border-box; }
@@ -39,6 +40,7 @@ const html = `<!doctype html>
       background: var(--cream);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     a { color: inherit; }
     .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
@@ -48,7 +50,7 @@ const html = `<!doctype html>
       inset: 0 0 auto;
       z-index: 5;
       padding: 24px 0;
-      color: white;
+      color: var(--ink);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
@@ -57,28 +59,28 @@ const html = `<!doctype html>
       height: 46px;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(255,255,255,.45);
+      border: 1px solid rgba(41,31,13,.45);
       border-radius: 50%;
-      color: var(--gold);
+      color: var(--forest);
       font: 700 15px/1 Georgia, serif;
       letter-spacing: .08em;
     }
     .brand-text { display: grid; line-height: 1.15; }
     .brand-text strong { font-family: Georgia, "Times New Roman", serif; font-size: 18px; letter-spacing: .03em; }
-    .brand-text span { color: rgba(255,255,255,.68); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+    .brand-text span { color: rgba(41,31,13,.68); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
     .nav-links { display: flex; gap: 28px; align-items: center; }
-    .nav-links a { color: rgba(255,255,255,.78); text-decoration: none; font-size: 14px; }
-    .nav-links a:hover { color: white; }
+    .nav-links a { color: rgba(41,31,13,.78); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--ink); }
 
     .hero {
       min-height: 780px;
       display: grid;
       align-items: center;
-      color: white;
+      color: var(--ink);
       background:
-        radial-gradient(circle at 82% 25%, rgba(205,164,94,.22), transparent 31%),
-        radial-gradient(circle at 4% 86%, rgba(205,164,94,.12), transparent 28%),
-        linear-gradient(135deg, #0b1f1a 0%, #17382f 62%, #10251f 100%);
+        radial-gradient(circle at 82% 25%, rgba(255,255,255,.42), transparent 31%),
+        radial-gradient(circle at 4% 86%, rgba(255,248,220,.34), transparent 28%),
+        linear-gradient(135deg, #f6d45f 0%, #e1ad20 58%, #c78e09 100%);
       overflow: hidden;
       position: relative;
     }
@@ -89,15 +91,15 @@ const html = `<!doctype html>
       height: 560px;
       right: -180px;
       bottom: -230px;
-      border: 1px solid rgba(205,164,94,.28);
+      border: 1px solid rgba(75,53,16,.24);
       border-radius: 50%;
-      box-shadow: 0 0 0 70px rgba(205,164,94,.035), 0 0 0 140px rgba(205,164,94,.025);
+      box-shadow: 0 0 0 70px rgba(255,248,220,.12), 0 0 0 140px rgba(255,248,220,.08);
     }
     .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; padding: 130px 0 90px; position: relative; z-index: 1; }
-    .eyebrow { color: var(--gold); font-weight: 700; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow { color: var(--gold-dark); font-weight: 800; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }
     h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.08; margin: 0; }
     h1 { font-size: clamp(52px, 7vw, 88px); letter-spacing: -.04em; margin: 18px 0 26px; max-width: 800px; }
-    .hero-copy > p { max-width: 670px; font-size: clamp(18px, 2vw, 22px); color: rgba(255,255,255,.76); margin: 0 0 34px; }
+    .hero-copy > p { max-width: 670px; font-size: clamp(18px, 2vw, 22px); color: rgba(41,31,13,.78); margin: 0 0 34px; }
     .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
     .button {
       display: inline-flex;
@@ -113,21 +115,21 @@ const html = `<!doctype html>
       transition: transform .2s, background .2s, border-color .2s;
     }
     .button:hover { transform: translateY(-2px); }
-    .button-primary { background: var(--gold); color: #16221d; }
-    .button-primary:hover { background: #dbb874; }
-    .button-ghost { border-color: rgba(255,255,255,.32); color: white; }
-    .button-ghost:hover { border-color: rgba(255,255,255,.72); }
+    .button-primary { background: var(--forest); color: white; }
+    .button-primary:hover { background: #493710; }
+    .button-ghost { border-color: rgba(41,31,13,.38); color: var(--ink); }
+    .button-ghost:hover { border-color: rgba(41,31,13,.75); }
     .hero-note {
       padding: 34px;
-      border: 1px solid rgba(255,255,255,.15);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(41,31,13,.18);
+      background: rgba(255,253,245,.36);
       backdrop-filter: blur(14px);
       border-radius: 24px;
-      box-shadow: 0 30px 80px rgba(0,0,0,.15);
+      box-shadow: 0 30px 80px rgba(78,52,0,.16);
     }
-    .hero-note .line { width: 52px; height: 2px; background: var(--gold); margin-bottom: 24px; }
-    .hero-note p { margin: 0; color: rgba(255,255,255,.76); font-size: 17px; }
-    .hero-note strong { display: block; color: white; font: 500 25px/1.25 Georgia, serif; margin-bottom: 16px; }
+    .hero-note .line { width: 52px; height: 2px; background: var(--forest); margin-bottom: 24px; }
+    .hero-note p { margin: 0; color: rgba(41,31,13,.76); font-size: 17px; }
+    .hero-note strong { display: block; color: var(--ink); font: 500 25px/1.25 Georgia, serif; margin-bottom: 16px; }
 
     section { padding: 105px 0; }
     .intro { text-align: center; max-width: 780px; margin: 0 auto 55px; }
@@ -147,7 +149,7 @@ const html = `<!doctype html>
     .number { color: var(--gold-dark); font-size: 12px; font-weight: 800; letter-spacing: .18em; }
     .card h3 { font-size: 34px; margin: 18px 0 16px; }
     .card p { color: var(--muted); margin: 0 0 26px; }
-    .text-link { color: var(--forest-2); text-decoration: none; font-weight: 800; border-bottom: 1px solid rgba(16,37,31,.25); padding-bottom: 3px; }
+    .text-link { color: var(--forest-2); text-decoration: none; font-weight: 800; border-bottom: 1px solid rgba(92,67,13,.3); padding-bottom: 3px; }
     .text-link:hover { color: var(--gold-dark); border-color: var(--gold-dark); }
     .resource-list { display: grid; gap: 11px; margin-top: 24px; }
     .resource-list a { display: flex; justify-content: space-between; gap: 14px; text-decoration: none; color: var(--forest-2); font-size: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
@@ -170,15 +172,36 @@ const html = `<!doctype html>
     .quote p { font: 500 27px/1.35 Georgia, serif; margin: 0 0 24px; max-width: 460px; }
     .quote span { color: rgba(255,255,255,.65); font-size: 14px; }
 
+    .founders { padding-top: 20px; }
+    .founder-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .founder-card {
+      display: grid;
+      grid-template-columns: minmax(180px, .78fr) 1.22fr;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .founder-photo { min-height: 430px; background: var(--forest); }
+    .founder-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; }
+    .founder-body { padding: 38px 34px; display: flex; flex-direction: column; align-items: flex-start; }
+    .founder-role { color: var(--gold-dark); font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .founder-body h3 { font-size: 34px; margin: 13px 0 16px; }
+    .founder-body p { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+    .founder-body .text-link { margin-top: auto; }
+
     .cta { padding-top: 20px; }
     .cta-panel { background: linear-gradient(135deg, #a77c38, #d2ad6c); border-radius: 30px; padding: 65px; display: flex; justify-content: space-between; align-items: center; gap: 40px; box-shadow: var(--shadow); }
     .cta-panel h2 { max-width: 650px; font-size: clamp(36px, 5vw, 58px); margin: 0; color: #14211d; }
     .cta-panel p { margin: 16px 0 0; color: rgba(20,33,29,.72); }
     .cta-panel .button { background: var(--forest); color: white; flex: 0 0 auto; }
 
-    footer { background: #091713; color: rgba(255,255,255,.68); padding: 55px 0 34px; margin-top: 105px; }
+    footer { background: #241a08; color: rgba(255,255,255,.68); padding: 55px 0 34px; margin-top: 105px; }
     .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding-bottom: 38px; border-bottom: 1px solid rgba(255,255,255,.1); }
     .footer-top .brand { color: white; }
+    .footer-top .brand .mark { color: var(--gold-light); border-color: rgba(255,255,255,.42); }
+    .footer-top .brand-text span { color: rgba(255,255,255,.58); }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { text-decoration: none; font-size: 14px; }
     .footer-links a:hover { color: white; }
@@ -191,15 +214,19 @@ const html = `<!doctype html>
       .hero-grid, .principle-grid, .about-grid { grid-template-columns: 1fr; gap: 45px; }
       .hero-grid { padding-top: 150px; }
       .cards { grid-template-columns: 1fr; }
+      .founder-grid { grid-template-columns: 1fr; }
       .cta-panel { padding: 42px 30px; align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 520px) {
       .wrap { width: min(100% - 28px, 1160px); }
       .brand-text span { display: none; }
-      .nav .button { padding: 11px 15px; }
-      h1 { font-size: 50px; }
+      .nav-links { display: none; }
+      .hero-grid > * { min-width: 0; }
+      h1 { font-size: 46px; }
       section { padding: 76px 0; }
       .card, .hero-note, .quote { padding: 30px 24px; }
+      .founder-card { grid-template-columns: 1fr; }
+      .founder-photo { min-height: 360px; max-height: 520px; }
       .quote p { font-size: 23px; }
       .footer-top { flex-direction: column; }
     }
@@ -216,6 +243,7 @@ const html = `<!doctype html>
         <a href="#services">Services</a>
         <a href="https://vanthari.gns-success.com/" target="_blank" rel="noopener">Vanthari</a>
         <a href="#about">About</a>
+        <a href="#founders">Founders</a>
         <a class="button button-ghost" href="https://cal.com/gemmaserenity/30min" target="_blank" rel="noopener">Start a conversation</a>
       </div>
     </div>
@@ -244,7 +272,7 @@ const html = `<!doctype html>
     <section id="services">
       <div class="wrap">
         <div class="intro">
-          <div class="eyebrow">Two paths. One purpose.</div>
+          <div class="eyebrow">Three paths. One purpose.</div>
           <h2>Helping you move forward with clarity.</h2>
           <p>Whether you are thinking about property, protection, or both, the first step is understanding what matters to you.</p>
         </div>
@@ -299,14 +327,44 @@ const html = `<!doctype html>
         <div class="about-copy">
           <div class="eyebrow">About GNS</div>
           <h2>Global Network of Success</h2>
-          <p>GNS is an independent business led by Gemma Gorokhoff. It brings together education, relationships, the Vanthari online community, and selected professional resources across real estate and insurance.</p>
+          <p>GNS is an independent platform shaped by Gemma and Sascha Gorokhoff. It brings together education, relationships, the Vanthari online community, and selected professional resources across real estate and insurance.</p>
           <p>Rather than being defined by one corporate affiliation, GNS may enter into specific agreements with different partners over time. This allows each conversation to begin with the person and the need—not with a single company name.</p>
           <a class="text-link" href="mailto:gemma@gemmaserenity.com">gemma@gemmaserenity.com →</a>
         </div>
         <aside class="quote">
           <p>Success is not one destination. It is the network of knowledge, choices, and people that helps us keep moving forward.</p>
-          <span>Gemma Gorokhoff · Founder, GNS</span>
+          <span>Gemma &amp; Sascha Gorokhoff · Founders, GNS</span>
         </aside>
+      </div>
+    </section>
+
+    <section class="founders" id="founders">
+      <div class="wrap">
+        <div class="intro">
+          <div class="eyebrow">The people behind GNS</div>
+          <h2>Two perspectives. One shared vision.</h2>
+          <p>Global Network of Success is grounded in the complementary experience, ideas, and relationships Gemma and Sascha bring to the network.</p>
+        </div>
+        <div class="founder-grid">
+          <article class="founder-card">
+            <div class="founder-photo"><img src="/gemma-serenity.jpg" alt="Gemma Serenity Gorokhoff" loading="lazy"></div>
+            <div class="founder-body">
+              <div class="founder-role">Co-Founder · Advisor · Builder</div>
+              <h3>Gemma Serenity Gorokhoff</h3>
+              <p>Gemma is a Swiss-American entrepreneur, trusted advisor, published author, and founder of Predictable Revenue Systems and The Manifesting Queen. Her work connects behavioral insight, technology, education, and human transformation. Through GNS, she brings that integrative perspective to real estate, insurance education, and community—helping people understand their options and move forward with greater confidence.</p>
+              <a class="text-link" href="https://gemmaserenity.com/" target="_blank" rel="noopener">Visit Gemma’s personal website →</a>
+            </div>
+          </article>
+          <article class="founder-card">
+            <div class="founder-photo"><img src="/sascha-gorokhoff.jpg" alt="Sascha Gorokhoff" loading="lazy"></div>
+            <div class="founder-body">
+              <div class="founder-role">Co-Founder · Strategist · Leadership Advisor</div>
+              <h3>Sascha Gorokhoff</h3>
+              <p>Sascha is a Swiss-American executive coach, leadership advisor, strategist, keynote speaker, and board-level counselor. Formed across multiple cultures and languages, his work focuses on the decisions, blind spots, and internal shifts that shape leadership, performance, prosperity, and personal sovereignty. Within GNS, he contributes strategic perspective, long-range thinking, and a commitment to turning adversity and ambition into meaningful progress.</p>
+              <a class="text-link" href="https://saschagorokhoff.com/" target="_blank" rel="noopener">Visit Sascha’s personal website →</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -327,30 +385,11 @@ const html = `<!doctype html>
     <div class="wrap">
       <div class="footer-top">
         <a class="brand" href="#top"><span class="mark">GNS</span><span class="brand-text"><strong>Global Network of Success</strong><span>Independent pathways forward</span></span></a>
-        <div class="footer-links"><a href="#services">Services</a><a href="https://vanthari.gns-success.com/" target="_blank" rel="noopener">Vanthari</a><a href="#about">About</a><a href="mailto:gemma@gemmaserenity.com">Contact</a></div>
+        <div class="footer-links"><a href="#services">Services</a><a href="https://vanthari.gns-success.com/" target="_blank" rel="noopener">Vanthari</a><a href="#about">About</a><a href="#founders">Founders</a><a href="mailto:gemma@gemmaserenity.com">Contact</a></div>
       </div>
-      <p class="disclosure">GNS — Global Network of Success is an independent business operated by Gemma Gorokhoff. GNS is not an insurance company, insurance carrier, lender, or real estate brokerage. Insurance products and services are available only through appropriately licensed and appointed professionals and authorized partner organizations, where permitted. Real estate services, referrals, or related support are provided only through appropriately licensed professionals and partner organizations, as applicable. Partners, appointments, services, and product availability may change and vary by jurisdiction. Information presented here is educational and is not legal, tax, investment, or individualized financial advice. No insurance coverage is bound or real estate agency relationship created through this website.</p>
+      <p class="disclosure">GNS — Global Network of Success is an independent business founded by Gemma and Sascha Gorokhoff. GNS is not an insurance company, insurance carrier, lender, or real estate brokerage. Insurance products and services are available only through appropriately licensed and appointed professionals and authorized partner organizations, where permitted. Real estate services, referrals, or related support are provided only through appropriately licensed professionals and partner organizations, as applicable. Partners, appointments, services, and product availability may change and vary by jurisdiction. Information presented here is educational and is not legal, tax, investment, or individualized financial advice. No insurance coverage is bound or real estate agency relationship created through this website.</p>
       <div class="copyright">© 2026 GNS — Global Network of Success. All rights reserved.</div>
     </div>
   </footer>
 </body>
-</html>`;
-
-export default {
-  async fetch(request) {
-    const url = new URL(request.url);
-    if (url.pathname === "/health") {
-      return Response.json({ ok: true, service: "gns-success-home" });
-    }
-    return new Response(html, {
-      headers: {
-        "content-type": "text/html; charset=UTF-8",
-        "cache-control": "public, max-age=300",
-        "content-security-policy": "default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://cal.com;",
-        "referrer-policy": "strict-origin-when-cross-origin",
-        "x-content-type-options": "nosniff",
-        "x-frame-options": "DENY"
-      }
-    });
-  }
-};
+</html>
