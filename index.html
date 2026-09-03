@@ -16,6 +16,12 @@
   <meta name="twitter:title" content="GNS | Global Network of Success">
   <meta name="twitter:description" content="Real Estate · Insurance · Community. Independent pathways forward.">
   <meta name="twitter:image" content="https://gns-success.com/og.png">
+  <link rel="canonical" href="https://gns-success.com/">
+  <link rel="icon" href="/gns-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/gns-logo-48.png" type="image/png" sizes="48x48">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/gns-logo-192.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>GNS | Global Network of Success</title>
   <style>
     :root {
@@ -54,17 +60,7 @@
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
-    .mark {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(41,31,13,.45);
-      border-radius: 50%;
-      color: var(--forest);
-      font: 700 15px/1 Georgia, serif;
-      letter-spacing: .08em;
-    }
+    .brand-logo { width: 48px; height: 48px; display: block; flex: 0 0 auto; }
     .brand-text { display: grid; line-height: 1.15; }
     .brand-text strong { font-family: Georgia, "Times New Roman", serif; font-size: 18px; letter-spacing: .03em; }
     .brand-text span { color: rgba(41,31,13,.68); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
@@ -200,7 +196,6 @@
     footer { background: #241a08; color: rgba(255,255,255,.68); padding: 55px 0 34px; margin-top: 105px; }
     .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding-bottom: 38px; border-bottom: 1px solid rgba(255,255,255,.1); }
     .footer-top .brand { color: white; }
-    .footer-top .brand .mark { color: var(--gold-light); border-color: rgba(255,255,255,.42); }
     .footer-top .brand-text span { color: rgba(255,255,255,.58); }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { text-decoration: none; font-size: 14px; }
@@ -236,7 +231,7 @@
   <nav class="nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="GNS home">
-        <span class="mark">GNS</span>
+        <img class="brand-logo" src="/gns-logo-96.png" alt="" width="48" height="48">
         <span class="brand-text"><strong>Global Network of Success</strong><span>Independent pathways forward</span></span>
       </a>
       <div class="nav-links">
@@ -384,7 +379,7 @@
   <footer>
     <div class="wrap">
       <div class="footer-top">
-        <a class="brand" href="#top"><span class="mark">GNS</span><span class="brand-text"><strong>Global Network of Success</strong><span>Independent pathways forward</span></span></a>
+        <a class="brand" href="#top"><img class="brand-logo" src="/gns-logo-96.png" alt="" width="48" height="48"><span class="brand-text"><strong>Global Network of Success</strong><span>Independent pathways forward</span></span></a>
         <div class="footer-links"><a href="#services">Services</a><a href="https://vanthari.gns-success.com/" target="_blank" rel="noopener">Vanthari</a><a href="#about">About</a><a href="#founders">Founders</a><a href="mailto:gemma@gemmaserenity.com">Contact</a></div>
       </div>
       <p class="disclosure">GNS — Global Network of Success is an independent business founded by Gemma and Sascha Gorokhoff. GNS is not an insurance company, insurance carrier, lender, or real estate brokerage. Insurance products and services are available only through appropriately licensed and appointed professionals and authorized partner organizations, where permitted. Real estate services, referrals, or related support are provided only through appropriately licensed professionals and partner organizations, as applicable. Partners, appointments, services, and product availability may change and vary by jurisdiction. Information presented here is educational and is not legal, tax, investment, or individualized financial advice. No insurance coverage is bound or real estate agency relationship created through this website.</p>

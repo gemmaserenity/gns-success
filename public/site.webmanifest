@@ -1,0 +1,21 @@
+{
+  "name": "GNS — Global Network of Success",
+  "short_name": "GNS",
+  "description": "Independent pathways across real estate, insurance, and community.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7dc",
+  "theme_color": "#e1ad20",
+  "icons": [
+    {
+      "src": "/gns-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/gns-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
